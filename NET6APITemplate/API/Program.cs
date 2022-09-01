@@ -1,3 +1,6 @@
+using Application;
+using Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 ConfigureServices(builder.Services);
@@ -9,6 +12,10 @@ Configure(app);
 
 void ConfigureServices(IServiceCollection services)
 {
+    //Add Application and Infrastructure layers to dependency injection
+    services.AddApplication();
+    services.AddInfrastructure();
+
     // Add services to the container.  
     services.AddControllers();
 
