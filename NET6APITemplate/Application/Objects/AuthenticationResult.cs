@@ -1,9 +1,8 @@
-﻿namespace Application.Objects
+﻿using Domain.Entities;
+
+namespace Application.Objects
 {
     public record AuthenticationResult(
-        Guid Id,
-        string FirstName,
-        string LastName,
-        string Email,
+        User User,
         string Token);
 }

@@ -1,3 +1,4 @@
+using API.Middleware;
 using Application;
 using Infrastructure;
 
@@ -26,6 +27,8 @@ void ConfigureServices(IServiceCollection services, ConfigurationManager configu
 
 void Configure(WebApplication app)
 {
+    app.UseMiddleware<ErrorHandlingMiddleware>();
+
     // Configure the HTTP request pipeline.
     if (app.Environment.IsDevelopment())
     {
