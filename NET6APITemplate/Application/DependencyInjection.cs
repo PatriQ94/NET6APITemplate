@@ -1,5 +1,6 @@
-﻿using Application.Interfaces;
-using Application.Services;
+﻿using Application.Interfaces.Commands;
+using Application.Interfaces.Queries;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Application
@@ -8,7 +9,7 @@ namespace Application
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
-            services.AddScoped<IAuthenticationService, AuthenticationService>();
+            services.AddMediatR(typeof(DependencyInjection).Assembly);
             return services;
         }
     }

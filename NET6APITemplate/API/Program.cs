@@ -1,4 +1,3 @@
-using API.Middleware;
 using Application;
 using Infrastructure;
 
@@ -17,7 +16,7 @@ void ConfigureServices(IServiceCollection services, ConfigurationManager configu
     services.AddApplication();
     services.AddInfrastructure(configuration);
 
-    // Add services to the container.  
+    // Add services to the container.
     services.AddControllers();
 
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -27,7 +26,9 @@ void ConfigureServices(IServiceCollection services, ConfigurationManager configu
 
 void Configure(WebApplication app)
 {
-    app.UseMiddleware<ErrorHandlingMiddleware>();
+    //Global error handling
+    //app.UseMiddleware<ErrorHandlingMiddleware>();
+    app.UseExceptionHandler("/error");
 
     // Configure the HTTP request pipeline.
     if (app.Environment.IsDevelopment())
