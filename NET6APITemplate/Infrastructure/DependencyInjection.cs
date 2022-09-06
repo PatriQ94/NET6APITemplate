@@ -1,5 +1,5 @@
 ﻿using Application.Common.Interfaces;
-using Application.Interfaces.Persistence;
+using Application.Common.Persistence;
 using Infrastructure.Objects;
 using Infrastructure.Persistence;
 using Infrastructure.Services;

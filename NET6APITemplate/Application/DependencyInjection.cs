@@ -1,6 +1,4 @@
-﻿using Application.Interfaces.Commands;
-using Application.Interfaces.Queries;
-using MediatR;
+﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Application

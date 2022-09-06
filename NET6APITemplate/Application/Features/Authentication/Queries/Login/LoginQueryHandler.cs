@@ -1,6 +1,6 @@
 ﻿using Application.Common.Interfaces;
 using Application.Common.Objects;
-using Application.Interfaces.Persistence;
+using Application.Common.Persistence;
 using Domain.Entities;
 using MediatR;
 
